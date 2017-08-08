@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
 
         // Zero suggestions on empty search
         // and if search text is search term
-        if (searchText.length === 0 || isSearchTerm) {
+        if (searchText.length === 0 || isSearchTerm) {
             nextState.suggestions = [];
         }
         

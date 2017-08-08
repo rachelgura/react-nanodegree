@@ -1,30 +1,28 @@
-My Reads: A Book Lending App
+# React Nanodegree MyReads project
+## Inistallation and start up
+Run `npm install` to install project dependencies and run `npm start` to start the localserver at port 3000
 
+## Additional content
+I added suggestions to the search feature so that it would be easier to know
+which search terms work.
 
+## Backend Server
+Provided in the exercise: [`BooksAPI.js`](src/BooksAPI.js)
 
-About:
+### `getAll()`
+* Returns a Promise which resolves to a JSON object containing a collection of book objects.
+* This collection represents the books currently in the bookshelves in your app.
 
-First project of three from Udacity's React Nanodegree. The app allows you to search for books located on an external database and add those to your book collection. Your book collection consists of three shelves of books - want to read, read, and currently reading.
+### `update(book, shelf)`
+* book: `<Object>` containing at minimum an `id` attribute
+* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
+* Returns a Promise which resolves to a JSON object containing the response data of the POST request
 
-Concepts :
+### `search(query, maxResults)`
+* query: `<String>`
+* maxResults: `<Integer>` Due to the nature of the backend server, search results are capped at 20, even if this is set higher.
+* Returns a Promise which resolves to a JSON object containing a collection of book objects.
+* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
-the use of state, and how state is passed down from parent to child,
-the use of JSX to build the UI of the app,
-and how to use React Routing to route our app.
-Additional requirements can be found in the project specification here.
-
-How to Open:
-
-Clone the repository to your desktop
-While inside the root of the repository, tun the $ npm install
-After the dependencies have been installed run the command $ npm start
-After that, the app should run perfectly!
-Sources
-
-Udacity's React Nanodegree Program
-
-My Reads: A Book Lending App Project Specification
-
-License
-
-This is a public domain work, dedicated using CC0 1.0. Feel free to do whatever you want with it.
+## Important
+The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SearchTerms.js](src/SearchTerms.js). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
