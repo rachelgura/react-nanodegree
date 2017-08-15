@@ -1,6 +1,6 @@
-# Readable
 
-## Installation
+
+// Installation//
 
 Inside the directory, run:
 
@@ -8,13 +8,12 @@ Inside the directory, run:
 yarn modules
 ```
 
-## Starting the app
-
-```bash
+// Starting the app//
+bash
 yarn start
 ```
 
-## Using the app
+//Using the app//
 
 Click on the button 'To the posts!'
 
