@@ -1,6 +1,8 @@
 
 
 // Installation//
+## Inistallation and start up
+Run `npm install` to install project dependencies and run `npm start` to start the localserver at port 3000
 
 Inside the directory, run:
 
